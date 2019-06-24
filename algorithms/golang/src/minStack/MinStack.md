@@ -1,0 +1,110 @@
+
+##### 155. Min Stack
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+-   push(x) -- Push element x onto stack.
+-   pop() -- Removes the element on top of the stack.
+-   top() -- Get the top element.
+-   getMin() -- Retrieve the minimum element in the stack.
+
+**Example:**
+```  
+MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.getMin();   --> Returns -3.
+minStack.pop();
+minStack.top();      --> Returns 0.
+minStack.getMin();   --> Returns -2.
+```
+##### 算法思路：  
+​	使用两个栈stack(保存原栈数据),minStack(保存当原栈在入栈过程中动态的最小值数据，有新最小值入栈到原栈才插入minStack，minStack中栈顶元素即为当前栈最小值。加入当前栈出栈数值为minStack栈顶元素，则minStack也出栈)。
+关键函数：
+push(int x)：如果入栈x小于等于minStack栈顶元素，则x入栈stack同时也入栈minStack。否则只入栈stack不入栈minStack。
+pop()：加入stack.pop()出栈数值等于minStack.peek()栈顶数值，则minStack栈也要同时出栈minStack.pop()。
+
+其中Stack数据结构为自己实现的栈。
+
+##### 代码：  
+
+```  
+package minStack
+
+import (	
+	"errors"
+)
+
+type Stack struct {
+	Element []int //Element
+}
+
+func NewStack() *Stack {
+	return &Stack{}
+}
+
+func (stack *Stack) Push(value ...int) {
+	stack.Element = append(stack.Element, value...)
+}
+
+//返回下一个元素
+func (stack *Stack) Top() (value int, err error) {
+	if stack.Size() > 0 {
+		return stack.Element[stack.Size()-1], nil
+	}else {
+		return -1, errors.New("Stack为空.") 
+	}
+}
+
+//返回下一个元素,并从Stack移除元素
+func (stack *Stack) Pop() (err error) {
+	if stack.Size() > 0 {
+		stack.Element = stack.Element[:stack.Size()-1]
+		return nil
+	}
+	return errors.New("Stack为空.") //read empty stack
+}
+
+
+func (stack *Stack)Size()(int){	
+	return len(stack.Element)
+}
+
+type MinStack struct {
+	MinSta Stack
+	AllSta Stack
+}
+
+/** initialize your data structure here. */
+func NewMinStack() *MinStack {
+	return &MinStack{}
+}
+
+
+func (this *MinStack) Push(x int) {
+	minStaTop, err := this.MinSta.Top()
+	if this.MinSta.Size() <= 0 || (err == nil && x <= minStaTop) {
+		this.MinSta.Push(x)
+	}
+	this.AllSta.Push(x)
+}
+
+func (this *MinStack) Pop() {
+	allStaTop, err1 := this.AllSta.Top()
+	minStaTop, err2 := this.MinSta.Top()
+	this.AllSta.Pop()
+	if err1 == nil && err2 == nil && allStaTop == minStaTop {
+		this.MinSta.Pop()
+	}
+}
+
+func (this *MinStack) Top() int {
+	top, _ := this.AllSta.Top()
+	return top
+}
+
+func (this *MinStack) GetMin() int {
+	top, _ := this.MinSta.Top()
+	return top
+}
+```
