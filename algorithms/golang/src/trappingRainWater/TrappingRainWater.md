@@ -19,9 +19,11 @@ Output: 6
 **①数据结构：**
 
 leftMax[]int,rightMax[]int 存储leftMax[i]从0-i最大的柱子（左）/rightMax[i]从i-[len(height)-1]最大的柱子（右）；
+
 **②动态规划数组：**
 
 leftMax,rightMax为动态规划数组，leftMax[i]=Math.max(height[i],leftMax[i-1]);
+
 **③核心算法：**
 
 当前节点i，左右两边最大柱子较少的值min,则可装水tmp=min-height[i]。
@@ -33,6 +35,7 @@ min > height[i] 时，能装水，数量为min-height[i]。
 **①算法思路：**
 
 由DP算法优化空间可得。
+
 **②优化点：**
 
 leftMax[]int,rightMax[]int 每个值用过一次就没用了，只用**leftMax int,rightMax int**保存左右两边柱子最大值即可。
