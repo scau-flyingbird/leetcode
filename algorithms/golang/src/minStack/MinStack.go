@@ -1,6 +1,6 @@
 package minStack
 
-import (	
+import (
 	"errors"
 )
 
@@ -20,8 +20,8 @@ func (stack *Stack) Push(value ...int) {
 func (stack *Stack) Top() (value int, err error) {
 	if stack.Size() > 0 {
 		return stack.Element[stack.Size()-1], nil
-	}else {
-		return -1, errors.New("Stack为空.") 
+	} else {
+		return -1, errors.New("Stack为空.")
 	}
 }
 
@@ -34,21 +34,22 @@ func (stack *Stack) Pop() (err error) {
 	return errors.New("Stack为空.") //read empty stack
 }
 
-
-func (stack *Stack)Size()(int){	
+func (stack *Stack) Size() int {
 	return len(stack.Element)
 }
 
 type MinStack struct {
-	MinSta Stack
-	AllSta Stack
+	MinSta *Stack
+	AllSta *Stack
 }
 
 /** initialize your data structure here. */
-func NewMinStack() *MinStack {
-	return &MinStack{}
+func Constructor() MinStack {
+	return MinStack{
+		MinSta: NewStack(),
+		AllSta: NewStack(),
+	}
 }
-
 
 func (this *MinStack) Push(x int) {
 	minStaTop, err := this.MinSta.Top()
