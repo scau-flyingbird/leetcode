@@ -1,4 +1,4 @@
-package mergeTwoLists
+package mergeTwoSortedLists
 
 import (
 	"github.com/stretchr/testify/assert"
