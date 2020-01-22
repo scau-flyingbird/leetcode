@@ -3,7 +3,7 @@
 
 |序号|题目|GIT|难度|语言|
 |---|---|---|---|---|
-|2.|[Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)|[两数相加](https://github.com/flyingbird2017/leetcode/tree/master/algorithms/java/src/addTwoNumbers)|<font color=orange>中等</font>|JAVA|
+|2.|[Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)|[两数相加](https://github.com/flyingbird2017/leetcode/tree/master/algorithms/java/src/addTwoNumbers)|<span style="color:orange">中等</span>|JAVA|
 | 21. | [Merge Two Sorted Lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | [合并两个有序链表](https://github.com/flyingbird2017/leetcode/tree/master/algorithms/java/src/mergeTwoSortedLists)| <font color=green>简单</font> | JAVA |
 | 21. | [Merge Two Sorted Lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | [合并两个有序链表](https://github.com/flyingbird2017/leetcode/tree/master/algorithms/golang/src/mergeTwoSortedLists) | <font color=green>简单</font> | GO |
 | 42. | [Trapping Rain Water](https://leetcode-cn.com/problems/trapping-rain-water/) | [接雨水](https://github.com/flyingbird2017/leetcode/tree/master/algorithms/golang/src/trappingRainWater) | <font color=red>困难</font> | GO |
