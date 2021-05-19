@@ -45,7 +45,6 @@
 |198|[打家劫舍]|[198.打家劫舍](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/198.打家劫舍.go)| | GO|
 |201|[数字范围按位与]|[201.数字范围按位与](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/201.数字范围按位与.go)| | GO|
 |206|[反转链表]|[206.反转链表](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/206.反转链表.go)| | GO|
-|206|[反转链表.|[206.反转链表](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/206.反转链表.java)| | JAVA|
 |208|[实现-trie-前缀树]|[208.实现-trie-前缀树](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/208.实现-trie-前缀树.go)| | GO|
 |210|[课程表-ii]|[210.课程表-ii](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/210.课程表-ii.go)| | GO|
 |213|[打家劫舍-ii]|[213.打家劫舍-ii](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/213.打家劫舍-ii.go)| | GO|
@@ -64,7 +63,7 @@
 |456|[132-模式]|[456.132-模式](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/456.132-模式.go)| | GO|
 |476|[数字的补数]|[476.数字的补数](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/476.数字的补数.go)| | GO|
 |480|[滑动窗口中位数]|[480.滑动窗口中位数](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/480.滑动窗口中位数.go)| | GO|
-|480|[滑动窗口中位数.|[480.滑动窗口中位数](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/480.滑动窗口中位数.java)| | JAVA|
+|480|[滑动窗口中位数]|[480.滑动窗口中位数](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/480.滑动窗口中位数.java)| | JAVA|
 |496|[下一个更大元素-i]|[496.下一个更大元素-i](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/496.下一个更大元素-i.go)| | GO|
 |503|[下一个更大元素-ii]|[503.下一个更大元素-ii](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/503.下一个更大元素-ii.go)| | GO|
 |521|[最长特殊序列-ⅰ]|[521.最长特殊序列-ⅰ](https://github.com/scau-flyingbird/leetcode/tree/master/algorithms/code-server/521.最长特殊序列-ⅰ.go)| | GO|
